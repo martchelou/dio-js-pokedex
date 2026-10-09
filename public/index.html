@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- seo -->
+    <meta name="keywords" content="HTML5,CSS3, javascript, template">
+    <meta name="description" content="Projeto de base para criar estilizar e processar uma página web com HTML5, CSS3 e JavaScript.">
+    <!-- links fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- links style -->
+    <link rel="shortcut icon" href="img/controller.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.min.css?121">
+    <!-- script -->
+    <script defer src="js/main.min.js"> // =] </script>
+
+    <title>Pokedex</title>
+</head>
+
+<body class="bg-green">
+    <header class="fixed-top py-3">
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center">
+                <h1 class="fw-light bg-white py-2 px-4 m-0 rounded shadow">
+                    Pokedex
+                </h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="my-5 py-5">
+        <div id="content" class="container">
+            <div class="spinner">loading</div>
+        </div>
+    </main>
+    
+    <footer class="fixed-bottom mb-4">
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center">
+                <p id="date" class="m-0 py-2 px-4 rounded shadow bg-white">{{date since 2026}}</p>
+            </div>
+        </div>
+    </footer>
+
+     <dialog id="modal">
+        <button id="modal-close-btn" class="btn" aria-label="fechar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+                viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+            </svg>
+        </button>
+        <div id="modal-body">
+            <div class="d-block mx-auto border-1 spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>        
+    </dialog>
+    
+</body>
+
+</html>

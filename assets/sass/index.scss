@@ -1,0 +1,41 @@
+// framework
+@use '../../node_modules/bootstrap/scss/bootstrap';
+
+// custom styles
+@use './colors';
+@use './grid';
+@use './modal';
+@use './spinner';
+
+// custom classes
+header {
+    background-color: color-mix(in srgb, var(--green--50) 90%, transparent);
+}
+.bg-green {
+    background-color: var(--green--50);
+}
+.bg-blue {
+    background-color: var(--blue--50);
+}
+.bg-purple {
+    background-color: var(--purple--50);
+}
+.text-purple {
+    color: var(--purple--700);
+}
+.btn-purple {
+    color: var(--purple--500);
+    background-color: var(--purple--200);    
+    &:hover {
+        color: var(--purple--100);
+        background-color: var(--purple--500);
+    }
+}
+.btn-yellow {
+    color: var(--gray--900);
+    background-color: var(--yellow--200);
+    &:hover {
+        color: var(--yellow--100);
+        background-color: var(--orange--900);
+    }
+}

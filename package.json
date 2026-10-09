@@ -1,0 +1,15 @@
+{
+  "name": "js-developer-pokedex",
+  "version": "1.7.1",
+  "description": "Pokedex developed in JavaScript, with the purpose of learning and practicing the language.",
+  "main": "public/index.html",
+  "type": "module",
+  "scripts": {
+    "dev:js": "node build.js",
+    "dev:css": "sass --watch --style=compressed ./assets/sass/index.scss:./public/css/style.min.css"
+  },
+  "devDependencies": {
+    "bootstrap": "^5.3.8",
+    "esbuild": "^0.28.0"
+  }
+}

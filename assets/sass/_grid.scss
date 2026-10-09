@@ -1,0 +1,21 @@
+.grid {
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    .grid__item {
+        border-radius: .5rem;
+        aspect-ratio: 2 / 1;
+        background-color: var(--gray--200);        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &.grid--center {
+        min-height: 85dvh;
+        place-items: center;
+    }
+}
+.grid__gap--0 { gap: 0; }
+.grid__gap--half { gap: calc(var(--gap) / 2); }
+.grid__gap--quarter { gap: calc(var(--gap) / 4); }
+.grid__gap--2 { gap: calc(var(--gap) * 2); }

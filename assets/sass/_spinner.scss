@@ -1,0 +1,56 @@
+// Spinner was inspired by https://youtu.be/8SeFSmvx3AA adapted from
+// Modern CSS Border & Box Shadow Gradient Effect | Old vs New by @Barmajli
+@property --deg {
+	syntax: "<angle>";
+	inherits: true;
+	initial-value: 0deg;
+}
+.spinner {
+    height: 80px;
+	aspect-ratio: 1/1;
+
+	border-radius: 50%;
+
+	color: var(--gray--400);
+	background-color: var(--white);
+		
+	position: relative;
+	display: grid;
+	place-items: center;
+    margin: 5rem auto;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background: conic-gradient(
+			from var(--deg) at center,
+            var(--white),            
+			var(--gray--50),
+			var(--gray--100),
+			var(--gray--200),
+			var(--gray--300),
+            var(--gray--400),
+			var(--gray--500),
+			var(--gray--600),
+            var(--gray--700),
+			var(--gray--800),
+			var(--gray--900),
+			var(--white)
+		);
+		border-radius: inherit;
+		z-index: -2;
+		padding: 2px;
+		animation: autoRotate 1s linear infinite;
+	}
+	&::after {
+		filter: blur(5px);
+	}
+}
+@keyframes autoRotate {
+	to {
+		--deg: 360deg;
+	}
+}

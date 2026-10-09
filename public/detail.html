@@ -1,0 +1,25 @@
+<section class="rounded shadow p-4 bg-purple">
+    <h2 class="fw-light text-purple">Detail: <strong id="pokemon-name">{{pokemon.name}}</strong> <small id="pokemon-id" class="float-end">#{{pokemon.id}}</small></h2>
+    <hr>
+    <picture class="text-center">
+        <img id="pokemon-img" src="{{pokemon.sprites.front_default}}" width="500" alt="{{pokemon.name}}" class="d-block mx-auto img-fluid">
+    </picture>
+    <hr>
+    <div class="row">
+        <div class="col fw-bold">Experience</div>
+        <div class="col text-end" id="pokemon-experience">{{pokemon.base_experience}}</div>
+    </div>
+    <div class="row">
+        <div class="col fw-bold">Height</div>
+        <div class="col text-end" id="pokemon-height">{{pokemon.height}}</div>
+    </div>
+    <div class="row">
+        <div class="col fw-bold">Weight</div>
+        <div class="col text-end" id="pokemon-weight">{{pokemon.weight}}</div>
+    </div>
+    <div class="row">
+        <div class="col fw-bold">Order</div>
+        <div class="col text-end" id="pokemon-order">{{pokemon.order}}</div>
+    </div>
+</section>
+  
